@@ -20,10 +20,10 @@ func main() {
 	helpers.PrintCommands()
 	reader := bufio.NewReader(os.Stdin)
 	for {
-		command, err := helpers.GetInput(reader, "[cmd]: ")
+		cmd, err := helpers.GetInput(reader, "[cmd]: ")
 		helpers.ErrorHandler(err)
 
-		switch command {
+		switch cmd {
 		case "add":
 			title, err := helpers.GetInput(reader, titleMsg)
 			helpers.ErrorHandler(err)
