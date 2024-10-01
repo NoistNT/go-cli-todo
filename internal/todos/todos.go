@@ -16,23 +16,20 @@ type Todo struct {
 // Todos struct
 type Todos []Todo
 
-// Seed Data
-var seedData Todos = Todos{
-	{ID: 1, Title: "Buy milk", Done: false},
-	{ID: 2, Title: "Buy eggs", Done: false},
-	{ID: 3, Title: "Buy bread", Done: true},
-	{ID: 4, Title: "Buy cheese", Done: true},
-	{ID: 5, Title: "Buy water", Done: false},
-}
-
 // todosList is the list of todos
 var todosList Todos
 
-// Init seeds the list with some todos
-func Init() {
-	fmt.Println("Initializing todos...")
-	todosList = seedData
-	fmt.Println("Todos initialized successfully.")
+// Seed seeds the list with some todos
+func Seed() {
+	fmt.Println("Seeding todos...")
+	todosList = Todos{
+		{ID: 1, Title: "Buy milk", Done: false},
+		{ID: 2, Title: "Buy eggs", Done: false},
+		{ID: 3, Title: "Buy bread", Done: true},
+		{ID: 4, Title: "Buy cheese", Done: true},
+		{ID: 5, Title: "Buy water", Done: false},
+	}
+	fmt.Println("Todos seeded successfully.")
 }
 
 // NewTodo returns a new Todo

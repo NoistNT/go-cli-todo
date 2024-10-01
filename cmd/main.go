@@ -16,7 +16,7 @@ func main() {
 		errorTitleMsg = "Error reading title"
 	)
 
-	todos.Init()
+	todos.Seed()
 	helpers.PrintCommands()
 	reader := bufio.NewReader(os.Stdin)
 	for {
